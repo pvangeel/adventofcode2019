@@ -4,11 +4,11 @@ object Solution extends App {
 
 
   def onlyIncreasingNumbers(s: String) = {
-    s.toSeq.sliding(2).map { a => (a(0), a(1)) }.toList.forall { case (a, b) => a <= b }
+    s.toSeq.sliding(2).map { a => (a(0), a(1)) }.forall { case (a, b) => a <= b }
   }
 
   def hasRepeatingDigit(s: String) = {
-    s.toSeq.sliding(2).map { a => (a(0), a(1)) }.toList.exists { case (a, b) => a == b }
+    s.toSeq.sliding(2).map { a => (a(0), a(1)) }.exists { case (a, b) => a == b }
   }
 
   def hasExactly2RepeatingDigit(s: String) = {
